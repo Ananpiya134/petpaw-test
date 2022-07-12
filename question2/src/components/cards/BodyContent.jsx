@@ -1,7 +1,6 @@
 
 
 export default function BodyContent ({item}) {
-    console.log(item)
     return <div className="d-flex m-3" style={{width:'330px'}} >
 					<img style={{width:'60px', height:'60px'}} className='me-4 mt-1'src={item.icon} alt='icon'/>
 					<div>
