@@ -15,10 +15,8 @@ export default function BodyContainer(){
 	useEffect(() => {
 		const fetchData = async () => {
 			const data = await axios.get("https://anapioficeandfire.com/api/houses/378").then( res => res.data)
-			console.log(data)
 			const lordLink = data.currentLord
 			const lord = await axios.get(lordLink).then(res => res.data.name)
-			console.log(lord)
 			setCurrentLord(lord)
 			setHouseName(data.name)
 		}
